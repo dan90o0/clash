@@ -1,0 +1,105 @@
+rule-providers:
+# 内容：可以自行添加其它自己想要在线规则列表
+  LocalAreaNetwork:
+    behavior: classical # domain, ipcidr or classical (premium core only)
+    type: http
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/LocalAreaNetwork.yaml"
+    interval: 86400
+    path: ./ACL4SSR/LocalAreaNetwork.yaml
+  UnBan:
+    behavior: classical 
+    type: http
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/UnBan.yaml"
+    interval: 86400
+    path: ./ACL4SSR/UnBan.yaml
+  BanAD:
+    behavior: classical 
+    type: http
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanAD.yaml"
+    interval: 86400
+    path: ./ACL4SSR/BanAD.yaml
+  BanProgramAD:
+    behavior: classical 
+    type: http
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanProgramAD.yaml"
+    interval: 86400
+    path: ./ACL4SSR/BanProgramAD.yaml
+  GoogleFCM:
+    behavior: classical 
+    type: http
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/GoogleFCM.yaml"
+    interval: 86400
+    path: ./ACL4SSR/GoogleFCM.yaml
+  GoogleCN:
+    behavior: classical 
+    type: http
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/GoogleCN.yaml"
+    interval: 86400
+    path: ./ACL4SSR/GoogleCN.yaml
+  SteamCN:
+    behavior: classical 
+    type: http
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/SteamCN.yaml"
+    interval: 86400
+    path: ./ACL4SSR/SteamCN.yaml
+  Microsoft:
+    behavior: classical 
+    type: http
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Microsoft.yaml"
+    interval: 86400
+    path: ./ACL4SSR/Microsoft.yaml
+  Apple:
+    behavior: classical 
+    type: http
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Apple.yaml"
+    interval: 86400
+    path: ./ACL4SSR/Apple.yaml
+  Telegram:
+    behavior: classical 
+    type: http
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Telegram.yaml"
+    interval: 86400
+    path: ./ACL4SSR/Telegram.yaml
+  ProxyLite:
+    behavior: classical 
+    type: http
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ProxyLite.yaml"
+    interval: 86400
+    path: ./ACL4SSR/ProxyLite.yaml
+  ProxyMedia:
+    behavior: classical 
+    type: http
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ProxyMedia.yaml"
+    interval: 86400
+    path: ./ACL4SSR/ProxyMedia.yaml
+  ChinaDomain:
+    behavior: classical 
+    type: http
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ChinaDomain.yaml"
+    interval: 86400
+    path: ./ACL4SSR/ChinaDomain.yaml
+  ChinaCompanyIp:
+    behavior: ipcidr 
+    type: http
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ChinaCompanyIp.yaml"
+    interval: 86400
+    path: ./ACL4SSR/ChinaCompanyIp.yaml
+rules:
+# 内容：可以自行添加其它自己想要的规则
+# ACL4SSR Online
+ - RULE-SET,LocalAreaNetwork,🎯 全球直连
+ - RULE-SET,UnBan,🎯 全球直连
+ - RULE-SET,BanAD,🛑 全球拦截
+ - RULE-SET,BanProgramAD,🍃 应用净化
+ - RULE-SET,GoogleFCM,📢 谷歌FCM
+ - RULE-SET,GoogleCN,🎯 全球直连
+ - RULE-SET,SteamCN,🎯 全球直连
+ - RULE-SET,Microsoft,Ⓜ️ 微软服务
+ - RULE-SET,Apple,🍎 苹果服务
+ - RULE-SET,Telegram,📲 电报信息
+ - RULE-SET,ProxyLite,🚀 节点选择 
+ - RULE-SET,ProxyMedia,🌍 国外媒体
+ - RULE-SET,ChinaDomain,🎯 全球直连
+ - RULE-SET,ChinaCompanyIp,🎯 全球直连
+ - GEOIP,CN,🎯 全球直连
+ - MATCH,🐟 漏网之鱼
